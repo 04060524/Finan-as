@@ -94,6 +94,15 @@
 const SUPABASE_URL = 'https://sdqcccdjruxboilbkutz.supabase.co';
 const SUPABASE_KEY = 'sb_publishable__YhcCze6R9qytoD6Pd3SoQ_Bv1g1876';
  
+const formaIcons = {
+  "Pix": { icon: "⚡", color: "#10b981" },
+  "Débito": { icon: "💳", color: "#3b82f6" },
+  "Crédito": { icon: "💳", color: "#8b5cf6" },
+  "Dinheiro": { icon: "💵", color: "#f59e0b" },
+  "Boleto": { icon: "📄", color: "#6b7280" },
+  "Não informado": { icon: "❓", color: "#6b7280" },
+};
+ 
 const catColors = {
   "Dívida":"#ef4444","Casa":"#f59e0b","Transporte":"#8b5cf6",
   "Compras":"#06b6d4","Moradia":"#3b82f6","Família":"#ec4899",
@@ -261,6 +270,14 @@ async function renderDespesas() {
             ${Object.keys(catColors).map(c=>`<option value="${c}">${c}</option>`).join('')}
           </select>
         </div>
+        <select id="new-forma">
+          <option value="Pix">Pix</option>
+          <option value="Débito">Débito</option>
+          <option value="Crédito">Crédito</option>
+          <option value="Dinheiro">Dinheiro</option>
+          <option value="Boleto">Boleto</option>
+          <option value="Não informado">Não informado</option>
+        </select>
         <button class="btn-add" onclick="addDespesa()">+ Adicionar despesa</button>
       </div>
     </div>
@@ -268,12 +285,13 @@ async function renderDespesas() {
     <div class="card" style="padding:14px 16px">
       ${(despesas||[]).length===0 ? '<p class="empty">Nenhuma despesa lançada.</p>' : `
       <table class="expense-table">
-        <thead><tr><th>Descrição</th><th>Categoria</th><th>Valor</th><th></th></tr></thead>
+        <thead><tr><th>Descrição</th><th>Categoria</th><th>Pagamento</th><th>Valor</th><th></th></tr></thead>
         <tbody>
           ${(despesas||[]).map(d=>`
             <tr>
               <td>${d.descricao}</td>
               <td><span class="cat-badge" style="background:${catColors[d.categoria]||'#333'}22;color:${catColors[d.categoria]||'#aaa'}">${d.categoria}</span></td>
+              <td><span style="font-size:12px;color:${(formaIcons[d.forma_pagamento]||formaIcons['Não informado']).color}">${(formaIcons[d.forma_pagamento]||formaIcons['Não informado']).icon} ${d.forma_pagamento||'Não informado'}</span></td>
               <td class="val-cell">${fmt(d.valor)}</td>
               <td><button class="btn-del" onclick="deleteDespesa('${d.id}')">✕</button></td>
             </tr>`).join('')}
@@ -292,8 +310,9 @@ async function addDespesa() {
   const valor = parseFloat(document.getElementById('new-valor').value);
   const cat = document.getElementById('new-cat').value;
   if (!desc || isNaN(valor) || valor <= 0) { alert('Preencha a descrição e um valor válido.'); return; }
+  const forma = document.getElementById('new-forma').value;
   await api('POST', '/rest/v1/despesas', {
-    usuario_id: currentUsuario, descricao: desc, valor, categoria: cat, mes: selectedMes, ano: selectedAno, pago: false
+    usuario_id: currentUsuario, descricao: desc, valor, categoria: cat, forma_pagamento: forma, mes: selectedMes, ano: selectedAno, pago: false
   });
   renderView();
 }
@@ -367,7 +386,7 @@ async function renderContas() {
             <tr>
               <td>
                 <div>${d.descricao}</div>
-                <div style="font-size:11px;color:var(--text-muted)">${d.categoria}</div>
+                <div style="font-size:11px;color:var(--text-muted)">${d.categoria} · <span style="color:${(formaIcons[d.forma_pagamento]||formaIcons['Não informado']).color}">${(formaIcons[d.forma_pagamento]||formaIcons['Não informado']).icon} ${d.forma_pagamento||'Não informado'}</span></div>
               </td>
               <td class="val-cell" style="color:var(--red)">${fmt(d.valor)}</td>
               <td style="text-align:right">
