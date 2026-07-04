@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
@@ -15,19 +15,15 @@
     --text: #e2e2f0; --text-muted: #6b6b8a; --text-dim: #9090b0;
   }
   body { background: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; min-height: 100vh; }
-
   header { background: var(--surface); border-bottom: 1px solid var(--border); padding: 14px 20px; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 100; }
   .logo { font-family: 'Space Grotesk', sans-serif; font-size: 17px; font-weight: 700; color: var(--purple-light); }
-
   .usuario-tabs { display: flex; gap: 6px; padding: 16px 20px 0; }
   .utab { padding: 8px 20px; border-radius: 8px; font-size: 13px; font-weight: 600; cursor: pointer; border: 2px solid var(--border); background: transparent; color: var(--text-muted); font-family: 'Inter', sans-serif; transition: all 0.2s; }
   .utab.felipe.active { background: var(--purple); border-color: var(--purple); color: #fff; }
   .utab.elizane.active { background: var(--pink); border-color: var(--pink); color: #fff; }
-
   .tabs { display: flex; gap: 6px; padding: 10px 20px 0; overflow-x: auto; }
   .tab { padding: 7px 14px; border-radius: 8px; font-size: 13px; font-weight: 500; cursor: pointer; border: 1px solid var(--border); background: transparent; color: var(--text-muted); white-space: nowrap; font-family: 'Inter', sans-serif; transition: all 0.2s; }
   .tab.active { background: var(--purple); border-color: var(--purple); color: #fff; }
-
   main { padding: 20px; display: flex; flex-direction: column; gap: 16px; }
   .kpi-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
   @media(min-width:600px) { .kpi-grid { grid-template-columns: repeat(4,1fr); } }
@@ -35,12 +31,10 @@
   .kpi-label { font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-muted); margin-bottom: 6px; }
   .kpi-value { font-family: 'Space Grotesk', sans-serif; font-size: 20px; font-weight: 700; line-height: 1; }
   .kpi-sub { font-size: 11px; color: var(--text-dim); margin-top: 3px; }
-
   .card { background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 18px; }
   .card-title { font-size: 12px; font-weight: 600; color: var(--text-dim); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 14px; }
   .chart-row { display: grid; grid-template-columns: 1fr; gap: 14px; }
   @media(min-width:640px) { .chart-row { grid-template-columns: 1fr 1fr; } }
-
   .bar-list { display: flex; flex-direction: column; gap: 10px; }
   .bar-item { display: flex; flex-direction: column; gap: 4px; }
   .bar-header { display: flex; justify-content: space-between; }
@@ -48,7 +42,6 @@
   .bar-val { font-size: 13px; font-weight: 600; font-family: 'Space Grotesk', sans-serif; }
   .bar-track { height: 5px; background: var(--border); border-radius: 99px; overflow: hidden; }
   .bar-fill { height: 100%; border-radius: 99px; }
-
   .expense-table { width: 100%; border-collapse: collapse; }
   .expense-table th { font-size: 11px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-muted); font-weight: 500; padding: 0 6px 10px; text-align: left; border-bottom: 1px solid var(--border); }
   .expense-table td { padding: 10px 6px; font-size: 13px; border-bottom: 1px solid rgba(42,42,69,0.4); vertical-align: middle; }
@@ -58,96 +51,87 @@
   .val-cell { font-family: 'Space Grotesk', sans-serif; font-weight: 600; }
   .btn-del { background: none; border: none; color: var(--red); cursor: pointer; font-size: 16px; padding: 0 4px; opacity: 0.6; }
   .btn-del:hover { opacity: 1; }
-
   .add-form { display: flex; flex-direction: column; gap: 10px; }
   .add-form input, .add-form select { padding: 10px 12px; background: var(--surface); border: 1px solid var(--border); border-radius: 10px; color: var(--text); font-size: 13px; font-family: 'Inter', sans-serif; outline: none; width: 100%; }
   .add-form input:focus, .add-form select:focus { border-color: var(--purple); }
   .add-form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
   .btn-add { width: 100%; padding: 11px; background: var(--green); border: none; border-radius: 10px; color: #fff; font-weight: 600; cursor: pointer; font-family: 'Inter', sans-serif; font-size: 14px; }
-
   .renda-edit { display: flex; gap: 10px; flex-wrap: wrap; }
   .renda-edit input { flex: 1; min-width: 140px; padding: 10px 12px; background: var(--surface); border: 1px solid var(--border); border-radius: 10px; color: var(--text); font-size: 14px; font-family: 'Inter', sans-serif; outline: none; }
   .btn-save { padding: 10px 18px; background: var(--purple); border: none; border-radius: 10px; color: #fff; font-weight: 600; cursor: pointer; font-family: 'Inter', sans-serif; }
-
   .mes-selector { display: flex; gap: 8px; flex-wrap: wrap; }
   .mes-selector select { padding: 8px 12px; background: var(--surface); border: 1px solid var(--border); border-radius: 8px; color: var(--text); font-size: 13px; font-family: 'Inter', sans-serif; outline: none; }
-
   .section-title { font-family: 'Space Grotesk', sans-serif; font-size: 15px; font-weight: 600; color: var(--text); display: flex; align-items: center; gap: 8px; }
   .section-title::after { content: ''; flex: 1; height: 1px; background: var(--border); }
-  .loading { text-align: center; padding: 40px; color: var(--text-muted); }
+  .loading { text-align: center; padding: 40px; color: var(--text-muted); font-size: 14px; }
   .empty { color: var(--text-muted); font-size: 13px; padding: 8px 0; }
 </style>
 </head>
 <body>
-
+ 
 <header>
   <div class="logo">💰 Finanças</div>
   <div style="font-size:13px;color:var(--text-muted)">2026</div>
 </header>
-
-<!-- Seletor de usuário -->
+ 
 <div class="usuario-tabs">
   <button class="utab felipe active" onclick="setUsuario('felipe')">👤 Felipe</button>
   <button class="utab elizane" onclick="setUsuario('elizane')">👤 Elizane</button>
 </div>
-
-<!-- Abas de navegação -->
+ 
 <div class="tabs" id="main-tabs">
   <button class="tab active" onclick="setView('dashboard')">Dashboard</button>
   <button class="tab" onclick="setView('despesas')">Despesas</button>
   <button class="tab" onclick="setView('renda')">Renda</button>
+  <button class="tab" onclick="setView('contas')">✅ Contas</button>
 </div>
-
+ 
 <main id="main-content">
   <div class="loading">Carregando...</div>
 </main>
-
+ 
 <script>
 const SUPABASE_URL = 'https://sdqcccdjruxboilbkutz.supabase.co';
 const SUPABASE_KEY = 'sb_publishable__YhcCze6R9qytoD6Pd3SoQ_Bv1g1876';
-
-// IDs fixos por usuário (sem login)
-const USUARIOS = {
-  felipe:  { id: 'felipe',  nome: 'Felipe' },
-  elizane: { id: 'elizane', nome: 'Elizane' }
-};
-
+ 
 const catColors = {
   "Dívida":"#ef4444","Casa":"#f59e0b","Transporte":"#8b5cf6",
   "Compras":"#06b6d4","Moradia":"#3b82f6","Família":"#ec4899",
   "Pessoal":"#10b981","Lazer":"#f97316","Outros":"#6b7280"
 };
 const meses = ["Janeiro","Fevereiro","Março","Abril","Maio","Junho","Julho","Agosto","Setembro","Outubro","Novembro","Dezembro"];
-
+ 
 let currentUsuario = 'felipe';
 let currentView = 'dashboard';
 let selectedMes = new Date().getMonth() + 1;
 let selectedAno = new Date().getFullYear();
 let chartInstance = null;
-
-// ---- API (sem auth, usando service key não exposta — dados em localStorage) ----
-// Como não temos login, os dados ficam no localStorage por usuário
-function storageKey(type) {
-  return `fin_${currentUsuario}_${type}_${selectedMes}_${selectedAno}`;
+ 
+// ---- API ----
+async function api(method, path, body = null) {
+  try {
+    const res = await fetch(`${SUPABASE_URL}${path}`, {
+      method,
+      headers: {
+        apikey: SUPABASE_KEY,
+        Authorization: `Bearer ${SUPABASE_KEY}`,
+        'Content-Type': 'application/json',
+        Prefer: 'return=representation'
+      },
+      body: body ? JSON.stringify(body) : undefined
+    });
+    if (res.status === 204) return null;
+    return await res.json();
+  } catch(e) {
+    console.error('Erro API:', e);
+    return null;
+  }
 }
-
-function getDespesas() {
-  return JSON.parse(localStorage.getItem(storageKey('despesas')) || '[]');
-}
-function saveDespesas(list) {
-  localStorage.setItem(storageKey('despesas'), JSON.stringify(list));
-}
-function getRenda() {
-  return parseFloat(localStorage.getItem(storageKey('renda')) || '0');
-}
-function saveRenda(valor) {
-  localStorage.setItem(storageKey('renda'), valor);
-}
-
+ 
 function fmt(v) {
   return Number(v || 0).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
 }
-
+ 
 // ---- USUÁRIO ----
 function setUsuario(u) {
   currentUsuario = u;
@@ -155,16 +139,16 @@ function setUsuario(u) {
   document.querySelector(`.utab.${u}`).classList.add('active');
   renderView();
 }
-
+ 
 // ---- VIEWS ----
 function setView(view) {
   currentView = view;
   document.querySelectorAll('#main-tabs .tab').forEach((t,i) => {
-    t.classList.toggle('active', ['dashboard','despesas','renda'][i] === view);
+    t.classList.toggle('active', ['dashboard','despesas','renda','contas'][i] === view);
   });
   renderView();
 }
-
+ 
 function mesSelectorHTML() {
   return `<div class="mes-selector">
     <select onchange="selectedMes=+this.value;renderView()">
@@ -175,39 +159,43 @@ function mesSelectorHTML() {
     </select>
   </div>`;
 }
-
-function renderView() {
-  if (currentView === 'dashboard') renderDashboard();
-  else if (currentView === 'despesas') renderDespesas();
-  else if (currentView === 'renda') renderRendaView();
+ 
+async function renderView() {
+  document.getElementById('main-content').innerHTML = '<div class="loading">Carregando...</div>';
+  if (currentView === 'dashboard') await renderDashboard();
+  else if (currentView === 'despesas') await renderDespesas();
+  else if (currentView === 'renda') await renderRenda();
+  else if (currentView === 'contas') await renderContas();
 }
-
+ 
 // ---- DASHBOARD ----
-function renderDashboard() {
-  const despesas = getDespesas();
-  const renda = getRenda();
-  const total = despesas.reduce((a, d) => a + parseFloat(d.valor || 0), 0);
+async function renderDashboard() {
+  const [despesas, rendaData] = await Promise.all([
+    api('GET', `/rest/v1/despesas?usuario_id=eq.${currentUsuario}&mes=eq.${selectedMes}&ano=eq.${selectedAno}&select=*`),
+    api('GET', `/rest/v1/renda?usuario_id=eq.${currentUsuario}&mes=eq.${selectedMes}&ano=eq.${selectedAno}&select=*`)
+  ]);
+ 
+  const renda = rendaData && rendaData[0] ? Number(rendaData[0].valor) : 0;
+  const total = (despesas||[]).reduce((a,d) => a + parseFloat(d.valor||0), 0);
   const saldo = renda - total;
-  const comprometido = renda > 0 ? (total / renda * 100).toFixed(1) : 0;
-  const sorted = [...despesas].sort((a, b) => b.valor - a.valor);
+  const comprometido = renda > 0 ? (total/renda*100).toFixed(1) : 0;
+  const sorted = [...(despesas||[])].sort((a,b) => b.valor - a.valor);
   const cats = {};
-  despesas.forEach(d => { cats[d.categoria] = (cats[d.categoria] || 0) + parseFloat(d.valor || 0); });
-  const catArr = Object.entries(cats).sort((a, b) => b[1] - a[1]);
-  const nome = USUARIOS[currentUsuario].nome;
-
-  const main = document.getElementById('main-content');
-  main.innerHTML = `
+  (despesas||[]).forEach(d => { cats[d.categoria] = (cats[d.categoria]||0) + parseFloat(d.valor||0); });
+  const catArr = Object.entries(cats).sort((a,b) => b[1]-a[1]);
+ 
+  document.getElementById('main-content').innerHTML = `
     ${mesSelectorHTML()}
     <div class="kpi-grid">
       <div class="kpi" style="border-color:rgba(16,185,129,.3)">
         <div class="kpi-label">Renda</div>
         <div class="kpi-value" style="color:var(--green)">${fmt(renda)}</div>
-        <div class="kpi-sub">${nome} · ${meses[selectedMes-1]}</div>
+        <div class="kpi-sub">${meses[selectedMes-1]}</div>
       </div>
       <div class="kpi" style="border-color:rgba(239,68,68,.3)">
         <div class="kpi-label">Despesas</div>
         <div class="kpi-value" style="color:var(--red)">${fmt(total)}</div>
-        <div class="kpi-sub">${despesas.length} itens</div>
+        <div class="kpi-sub">${(despesas||[]).length} itens</div>
       </div>
       <div class="kpi" style="border-color:rgba(${saldo>=0?'16,185,129':'239,68,68'},.3)">
         <div class="kpi-label">Saldo</div>
@@ -223,9 +211,9 @@ function renderDashboard() {
     <div class="chart-row">
       <div class="card">
         <div class="card-title">Maiores gastos</div>
-        ${sorted.length === 0 ? '<p class="empty">Nenhuma despesa lançada.</p>' : `
+        ${sorted.length===0 ? '<p class="empty">Nenhuma despesa lançada.</p>' : `
         <div class="bar-list">
-          ${sorted.slice(0,6).map(d => `
+          ${sorted.slice(0,6).map(d=>`
             <div class="bar-item">
               <div class="bar-header">
                 <span class="bar-name">${d.descricao}</span>
@@ -239,31 +227,29 @@ function renderDashboard() {
       </div>
       <div class="card">
         <div class="card-title">Por categoria</div>
-        ${catArr.length === 0 ? '<p class="empty">Nenhuma despesa lançada.</p>' : '<canvas id="donut-chart" height="200"></canvas>'}
+        ${catArr.length===0 ? '<p class="empty">Nenhuma despesa lançada.</p>' : '<canvas id="donut-chart" height="200"></canvas>'}
       </div>
     </div>`;
-
+ 
   if (catArr.length > 0) {
     if (chartInstance) chartInstance.destroy();
-    const ctx = document.getElementById('donut-chart').getContext('2d');
-    chartInstance = new Chart(ctx, {
+    chartInstance = new Chart(document.getElementById('donut-chart').getContext('2d'), {
       type: 'doughnut',
       data: {
-        labels: catArr.map(c => c[0]),
-        datasets: [{ data: catArr.map(c => c[1]), backgroundColor: catArr.map(c => catColors[c[0]]||'#888'), borderWidth: 2, borderColor: '#1e1e33' }]
+        labels: catArr.map(c=>c[0]),
+        datasets: [{ data: catArr.map(c=>c[1]), backgroundColor: catArr.map(c=>catColors[c[0]]||'#888'), borderWidth: 2, borderColor: '#1e1e33' }]
       },
       options: { plugins: { legend: { position: 'bottom', labels: { color: '#9090b0', font: { size: 11 }, padding: 12 } } }, cutout: '65%' }
     });
   }
 }
-
+ 
 // ---- DESPESAS ----
-function renderDespesas() {
-  const despesas = getDespesas();
-  const total = despesas.reduce((a, d) => a + parseFloat(d.valor || 0), 0);
-
-  const main = document.getElementById('main-content');
-  main.innerHTML = `
+async function renderDespesas() {
+  const despesas = await api('GET', `/rest/v1/despesas?usuario_id=eq.${currentUsuario}&mes=eq.${selectedMes}&ano=eq.${selectedAno}&select=*&order=created_at.desc`);
+  const total = (despesas||[]).reduce((a,d) => a + parseFloat(d.valor||0), 0);
+ 
+  document.getElementById('main-content').innerHTML = `
     ${mesSelectorHTML()}
     <div class="section-title">Adicionar despesa</div>
     <div class="card">
@@ -272,7 +258,7 @@ function renderDespesas() {
         <div class="add-form-row">
           <input type="number" id="new-valor" placeholder="Valor" step="0.01" min="0">
           <select id="new-cat">
-            ${Object.keys(catColors).map(c => `<option value="${c}">${c}</option>`).join('')}
+            ${Object.keys(catColors).map(c=>`<option value="${c}">${c}</option>`).join('')}
           </select>
         </div>
         <button class="btn-add" onclick="addDespesa()">+ Adicionar despesa</button>
@@ -280,16 +266,16 @@ function renderDespesas() {
     </div>
     <div class="section-title">Despesas de ${meses[selectedMes-1]}</div>
     <div class="card" style="padding:14px 16px">
-      ${despesas.length === 0 ? '<p class="empty">Nenhuma despesa lançada.</p>' : `
+      ${(despesas||[]).length===0 ? '<p class="empty">Nenhuma despesa lançada.</p>' : `
       <table class="expense-table">
         <thead><tr><th>Descrição</th><th>Categoria</th><th>Valor</th><th></th></tr></thead>
         <tbody>
-          ${despesas.map((d,i) => `
+          ${(despesas||[]).map(d=>`
             <tr>
               <td>${d.descricao}</td>
               <td><span class="cat-badge" style="background:${catColors[d.categoria]||'#333'}22;color:${catColors[d.categoria]||'#aaa'}">${d.categoria}</span></td>
               <td class="val-cell">${fmt(d.valor)}</td>
-              <td><button class="btn-del" onclick="deleteDespesa(${i})">✕</button></td>
+              <td><button class="btn-del" onclick="deleteDespesa('${d.id}')">✕</button></td>
             </tr>`).join('')}
           <tr>
             <td colspan="2" style="font-weight:600;padding-top:12px;color:var(--text-dim)">Total</td>
@@ -300,53 +286,129 @@ function renderDespesas() {
       </table>`}
     </div>`;
 }
-
-function addDespesa() {
+ 
+async function addDespesa() {
   const desc = document.getElementById('new-desc').value.trim();
   const valor = parseFloat(document.getElementById('new-valor').value);
   const cat = document.getElementById('new-cat').value;
-  if (!desc || isNaN(valor) || valor <= 0) {
-    alert('Preencha a descrição e um valor válido.');
-    return;
-  }
-  const list = getDespesas();
-  list.push({ descricao: desc, valor, categoria: cat });
-  saveDespesas(list);
+  if (!desc || isNaN(valor) || valor <= 0) { alert('Preencha a descrição e um valor válido.'); return; }
+  await api('POST', '/rest/v1/despesas', {
+    usuario_id: currentUsuario, descricao: desc, valor, categoria: cat, mes: selectedMes, ano: selectedAno, pago: false
+  });
   renderView();
 }
-
-function deleteDespesa(idx) {
+ 
+async function deleteDespesa(id) {
   if (!confirm('Remover esta despesa?')) return;
-  const list = getDespesas();
-  list.splice(idx, 1);
-  saveDespesas(list);
+  await api('DELETE', `/rest/v1/despesas?id=eq.${id}`);
   renderView();
 }
-
+ 
 // ---- RENDA ----
-function renderRendaView() {
-  const renda = getRenda();
-  const main = document.getElementById('main-content');
-  main.innerHTML = `
+async function renderRenda() {
+  const rendaData = await api('GET', `/rest/v1/renda?usuario_id=eq.${currentUsuario}&mes=eq.${selectedMes}&ano=eq.${selectedAno}&select=*`);
+  const renda = rendaData && rendaData[0] ? rendaData[0] : null;
+ 
+  document.getElementById('main-content').innerHTML = `
     ${mesSelectorHTML()}
     <div class="section-title">Renda de ${meses[selectedMes-1]}</div>
     <div class="card">
-      <div class="card-title">Renda atual: <span style="color:var(--green);font-family:'Space Grotesk',sans-serif">${renda > 0 ? fmt(renda) : 'Não cadastrada'}</span></div>
+      <div class="card-title">Renda atual: <span style="color:var(--green);font-family:'Space Grotesk',sans-serif">${renda ? fmt(renda.valor) : 'Não cadastrada'}</span></div>
       <div class="renda-edit">
-        <input type="number" id="renda-valor" placeholder="Ex: 1700.00" step="0.01" value="${renda > 0 ? renda : ''}">
-        <button class="btn-save" onclick="salvarRenda()">Salvar</button>
+        <input type="number" id="renda-valor" placeholder="Ex: 1700.00" step="0.01" value="${renda ? renda.valor : ''}">
+        <button class="btn-save" onclick="salvarRenda(${renda ? `'${renda.id}'` : 'null'})">Salvar</button>
       </div>
     </div>`;
 }
-
-function salvarRenda() {
+ 
+async function salvarRenda(id) {
   const valor = parseFloat(document.getElementById('renda-valor').value);
-  if (!valor || valor <= 0) return alert('Informe um valor válido.');
-  saveRenda(valor);
+  if (!valor || valor <= 0) { alert('Informe um valor válido.'); return; }
+  if (id && id !== 'null') {
+    await api('PATCH', `/rest/v1/renda?id=eq.${id}`, { valor });
+  } else {
+    await api('POST', '/rest/v1/renda', { usuario_id: currentUsuario, valor, mes: selectedMes, ano: selectedAno });
+  }
   renderView();
 }
-
-// ---- INIT ----
+ 
+// ---- CONTAS ----
+async function renderContas() {
+  const despesas = await api('GET', `/rest/v1/despesas?usuario_id=eq.${currentUsuario}&mes=eq.${selectedMes}&ano=eq.${selectedAno}&select=*&order=created_at.desc`);
+  const lista = despesas || [];
+  const pagas = lista.filter(d => d.pago);
+  const pendentes = lista.filter(d => !d.pago);
+  const totalPago = pagas.reduce((a,d) => a + parseFloat(d.valor||0), 0);
+  const totalPendente = pendentes.reduce((a,d) => a + parseFloat(d.valor||0), 0);
+ 
+  document.getElementById('main-content').innerHTML = `
+    ${mesSelectorHTML()}
+ 
+    <div class="kpi-grid" style="grid-template-columns:repeat(2,1fr)">
+      <div class="kpi" style="border-color:rgba(16,185,129,.3)">
+        <div class="kpi-label">✅ Pago</div>
+        <div class="kpi-value" style="color:var(--green)">${fmt(totalPago)}</div>
+        <div class="kpi-sub">${pagas.length} conta(s)</div>
+      </div>
+      <div class="kpi" style="border-color:rgba(239,68,68,.3)">
+        <div class="kpi-label">⏳ Pendente</div>
+        <div class="kpi-value" style="color:var(--red)">${fmt(totalPendente)}</div>
+        <div class="kpi-sub">${pendentes.length} conta(s)</div>
+      </div>
+    </div>
+ 
+    <div class="section-title">Pendentes</div>
+    <div class="card" style="padding:14px 16px">
+      ${pendentes.length === 0 ? '<p class="empty">Nenhuma conta pendente! 🎉</p>' : `
+      <table class="expense-table">
+        <thead><tr><th>Descrição</th><th>Valor</th><th>Pagar</th></tr></thead>
+        <tbody>
+          ${pendentes.map(d => `
+            <tr>
+              <td>
+                <div>${d.descricao}</div>
+                <div style="font-size:11px;color:var(--text-muted)">${d.categoria}</div>
+              </td>
+              <td class="val-cell" style="color:var(--red)">${fmt(d.valor)}</td>
+              <td style="text-align:right">
+                <button onclick="togglePago('${d.id}', true)" style="padding:6px 12px;background:var(--green);border:none;border-radius:8px;color:#fff;font-size:12px;font-weight:600;cursor:pointer">
+                  Marcar pago
+                </button>
+              </td>
+            </tr>`).join('')}
+        </tbody>
+      </table>`}
+    </div>
+ 
+    <div class="section-title">Pagas</div>
+    <div class="card" style="padding:14px 16px">
+      ${pagas.length === 0 ? '<p class="empty">Nenhuma conta paga ainda.</p>' : `
+      <table class="expense-table">
+        <thead><tr><th>Descrição</th><th>Valor</th><th></th></tr></thead>
+        <tbody>
+          ${pagas.map(d => `
+            <tr style="opacity:0.6">
+              <td>
+                <div style="text-decoration:line-through">${d.descricao}</div>
+                <div style="font-size:11px;color:var(--text-muted)">${d.categoria}</div>
+              </td>
+              <td class="val-cell" style="color:var(--green)">${fmt(d.valor)}</td>
+              <td style="text-align:right">
+                <button onclick="togglePago('${d.id}', false)" style="padding:6px 10px;background:transparent;border:1px solid var(--border);border-radius:8px;color:var(--text-muted);font-size:11px;cursor:pointer">
+                  Desfazer
+                </button>
+              </td>
+            </tr>`).join('')}
+        </tbody>
+      </table>`}
+    </div>`;
+}
+ 
+async function togglePago(id, pago) {
+  await api('PATCH', `/rest/v1/despesas?id=eq.${id}`, { pago });
+  renderView();
+}
+ 
 renderView();
 </script>
 </body>
